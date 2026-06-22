@@ -8,8 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scene_main.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scene_main.Controller">
    <children>
       <ListView fx:id="list_view" layoutX="132.0" layoutY="129.0" prefHeight="323.0" prefWidth="346.0" style="-fx-border-color: green;" />
       <ImageView fitHeight="119.0" fitWidth="123.0" layoutX="14.0" layoutY="14.0">
@@ -41,5 +40,15 @@
       <Button layoutX="315.0" layoutY="472.0" mnemonicParsing="false" onAction="#on_update" prefHeight="43.0" prefWidth="98.0" text="Update" />
       <Button layoutX="198.0" layoutY="472.0" mnemonicParsing="false" onAction="#on_read" prefHeight="43.0" prefWidth="98.0" text="Read" />
       <Button layoutX="83.0" layoutY="472.0" mnemonicParsing="false" onAction="#on_create" prefHeight="43.0" prefWidth="98.0" text="Create" />
+      <ImageView fitHeight="119.0" fitWidth="177.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Project_mini2/itc.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="119.0" fitWidth="177.0" layoutX="483.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Project_mini2/gtr.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
