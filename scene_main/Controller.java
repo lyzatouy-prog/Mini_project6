@@ -55,10 +55,6 @@ public class Controller {
     void initialize() {
 
         var data = new ArrayList<String>();
-        data.add("Orange");
-        data.add("Apple");
-        data.add("Banana");
-
         // add data to list view
         list_view.getItems().addAll(data);
 
