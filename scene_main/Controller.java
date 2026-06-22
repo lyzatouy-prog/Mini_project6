@@ -1,7 +1,6 @@
 package scene_main;
 
 import java.nio.file.Files;
-import java.sql.Array;
 import java.util.ArrayList;
 
 import javafx.event.ActionEvent;
@@ -16,7 +15,7 @@ public class Controller {
     private Label label_status;
 
     @FXML
-    private ListView<?> list_view;
+    private ListView<String> list_view;
 
     @FXML
     void on_create(ActionEvent event) {
@@ -53,7 +52,7 @@ public class Controller {
     }
 
     @FXML
-    void intialize() {
+    void initialize() {
 
         var data = new ArrayList<String>();
         data.add("Orange");
