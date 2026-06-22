@@ -11,6 +11,7 @@
         "javafx_sdk/lib/javafx-swt.jar",
         "javafx_sdk/lib/jdk.jsobject.jar",
         "javafx_sdk/lib/jfx.incubator.input.jar",
-        "javafx_sdk/lib/jfx.incubator.richtext.jar"
+        "javafx_sdk/lib/jfx.incubator.richtext.jar",
+        "javafx_sdk/**/*.jar"
     ]
 }
