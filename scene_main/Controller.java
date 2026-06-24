@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
@@ -61,7 +62,16 @@ public class Controller {
     }
 
     @FXML
-    void on_update(ActionEvent event) {
+    void on_update(ActionEvent event) throws Exception {
+
+        var stage = (Stage) label_status.getScene().getWindow();
+
+        var view_update = getClass().getResource("/scene_update/View.fxml");
+        var loader = new FXMLLoader(view_update);
+
+        var scene = new Scene(loader.load());
+        stage.setScene(scene);
+        stage.show();
 
     }
 
