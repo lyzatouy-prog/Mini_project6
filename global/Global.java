@@ -1,9 +1,9 @@
 package global;
 
-import 
+import java.util.ArrayList;
 
 public class Global {
 
-    public static String list;
+    public static ArrayList<String> list = new ArrayList<>();
     
 }
