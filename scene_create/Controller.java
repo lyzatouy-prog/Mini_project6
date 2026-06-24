@@ -19,8 +19,7 @@ public class Controller {
 
     @FXML
     void on_save(ActionEvent event) throws Exception{
- 
-        var node = (Node) event.getSource();
+ var node = (Node) event.getSource();
         var stage = (Stage) node.getScene().getWindow();
 
         var view_main = getClass().getResource("/scene_main/View.fxml");
