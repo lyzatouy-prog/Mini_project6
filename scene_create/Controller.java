@@ -18,6 +18,7 @@ public class Controller {
     private Button save;
 
     @FXML
+<<<<<<< Updated upstream
     void on_save(ActionEvent event) throws Exception{
  var node = (Node) event.getSource();
         var stage = (Stage) node.getScene().getWindow();
@@ -32,6 +33,23 @@ public class Controller {
         var scene = new Scene(loader.load());
         stage.setScene(scene);
         stage.show();
+=======
+    void on_save(ActionEvent event) {
+        System.out.println("scene_create.Controller.on_save called");
+        try {
+            var stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            var view_main = getClass().getResource("/scene_main/View.fxml");
+            System.out.println("scene_create: view_main URL = " + view_main);
+            var loader = new FXMLLoader(view_main);
+            var scene = new Scene(loader.load());
+            System.out.println("scene_create: main FXML loaded");
+            stage.setScene(scene);
+            stage.show();
+            System.out.println("scene_create: switched to main scene");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+>>>>>>> Stashed changes
     }
 
 }

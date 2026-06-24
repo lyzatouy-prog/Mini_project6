@@ -19,7 +19,20 @@ public class Controller {
 
     @FXML
     void on_save(ActionEvent event) {
-
+        System.out.println("scene_update.Controller.on_save called");
+        try {
+            var stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+            var view_main = getClass().getResource("/scene_main/View.fxml");
+            System.out.println("scene_update: view_main URL = " + view_main);
+            var loader = new FXMLLoader(view_main);
+            var scene = new Scene(loader.load());
+            System.out.println("scene_update: main FXML loaded");
+            stage.setScene(scene);
+            stage.show();
+            System.out.println("scene_update: switched to main scene");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }
