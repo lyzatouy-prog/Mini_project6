@@ -27,8 +27,8 @@ public class Controller {
     void on_create(ActionEvent event) throws Exception {
         var node = (Node) event.getSource();
         var stage = (Stage) label_status.getScene().getWindow();
-        var view_create = getClass().getResource("../scene_create/View.fxml");
-        
+        var view_create = getClass().getResource("/scene_create/View.fxml");
+
         var controller_create = new scene_create.Controller();
         var loader = new FXMLLoader();
         loader.setController(controller_create);
@@ -45,11 +45,11 @@ public class Controller {
     void on_delete(ActionEvent event) throws Exception {
         var node = (Node) event.getSource();
         var stage = (Stage) label_status.getScene().getWindow();
-        var view_create = getClass().getResource("../scene_delete/View.fxml");
-        
-        var controller_create = new scene_delete.Controller();
+        var view_create = getClass().getResource("/scene_delete/View.fxml");
+
+        var controller_delete = new scene_delete.Controller();
         var loader = new FXMLLoader();
-        loader.setController(controller_create);
+        loader.setController(controller_delete);
         loader.setLocation(view_create);
 
         var scene = new Scene(loader.load());
