@@ -18,7 +18,7 @@ public class Controller {
     private Button save;
 
     @FXML
-    void on_create(ActionEvent event) throws Exception{
+    void on_save(ActionEvent event) throws Exception{
  var node = (Node) event.getSource();
         var stage = (Stage) node.getScene().getWindow();
 
