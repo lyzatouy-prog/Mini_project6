@@ -1,5 +1,6 @@
 package scene_create;
 
+import global.Global;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -18,38 +19,18 @@ public class Controller {
     private Button save;
 
     @FXML
-<<<<<<< Updated upstream
     void on_save(ActionEvent event) throws Exception{
- var node = (Node) event.getSource();
+        var node = (Node) event.getSource();
         var stage = (Stage) node.getScene().getWindow();
 
-        var view_main = getClass().getResource("/scene_main/View.fxml");
-        var controller_main = new scene_main.Controller();
+        Global.list.add(name.getText());
 
-        var loader = new javafx.fxml.FXMLLoader();
-        loader.setLocation(view_main);
-        loader.setController(controller_main);
+        var view_main = getClass().getResource("/scene_main/View.fxml");
+        var loader = new FXMLLoader(view_main);
 
         var scene = new Scene(loader.load());
         stage.setScene(scene);
         stage.show();
-=======
-    void on_save(ActionEvent event) {
-        System.out.println("scene_create.Controller.on_save called");
-        try {
-            var stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            var view_main = getClass().getResource("/scene_main/View.fxml");
-            System.out.println("scene_create: view_main URL = " + view_main);
-            var loader = new FXMLLoader(view_main);
-            var scene = new Scene(loader.load());
-            System.out.println("scene_create: main FXML loaded");
-            stage.setScene(scene);
-            stage.show();
-            System.out.println("scene_create: switched to main scene");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
->>>>>>> Stashed changes
     }
 
 }
