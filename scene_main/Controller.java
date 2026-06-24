@@ -43,19 +43,28 @@ public class Controller {
 
     @FXML
     void on_delete(ActionEvent event) throws Exception {
-        var node = (Node) event.getSource();
-        var stage = (Stage) label_status.getScene().getWindow();
-        var view_create = getClass().getResource("/scene_delete/View.fxml");
 
-        var controller_delete = new scene_delete.Controller();
-        var loader = new FXMLLoader();
-        loader.setController(controller_delete);
-        loader.setLocation(view_create);
+        var selected_index = list_view.getSelectionModel().getSelectedIndex();
+        System.out.println("selected index: " + selected_index);
 
-        var scene = new Scene(loader.load());
+        if (selected_index == -1) {
+            return;
+        }
 
-        stage.setScene(scene);
-        stage.show();
+        Global.selected_index = selected_index;
+        // var node = (Node) event.getSource();
+        // var stage = (Stage) label_status.getScene().getWindow();
+        // var view_create = getClass().getResource("/scene_delete/View.fxml");
+
+        // var controller_delete = new scene_delete.Controller();
+        // var loader = new FXMLLoader();
+        // loader.setController(controller_delete);
+        // loader.setLocation(view_create);
+
+        // var scene = new Scene(loader.load());
+
+        // stage.setScene(scene);
+        // stage.show();
         
     }
 
