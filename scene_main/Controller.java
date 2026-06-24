@@ -3,6 +3,8 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+
+import global.Global;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -57,7 +59,7 @@ public class Controller {
         var data = new ArrayList<String>();
         for (var line : Files.readAllLines(file.toPath())) {
             data.add((String) line);
-        }
+        };
 
         list_view.getItems().addAll(data);
 
@@ -71,13 +73,7 @@ public class Controller {
     @FXML
     void initialize() {
 
-        var data = new ArrayList<String>();
-        data.add("Orange");
-        data.add("Apple");
-        data.add("Banana");
-
-        // add data to list view
-        list_view.getItems().addAll(data);
+        list_view.getItems().addAll(Global.list);
 
     }
 
