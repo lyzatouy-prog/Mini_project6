@@ -18,6 +18,22 @@ public class Controller {
     private Button save;
 
     @FXML
+<<<<<<< Updated upstream
+    void on_save(ActionEvent event) throws Exception{
+ var node = (Node) event.getSource();
+        var stage = (Stage) node.getScene().getWindow();
+
+        var view_main = getClass().getResource("/scene_main/View.fxml");
+        var controller_main = new scene_main.Controller();
+
+        var loader = new javafx.fxml.FXMLLoader();
+        loader.setLocation(view_main);
+        loader.setController(controller_main);
+
+        var scene = new Scene(loader.load());
+        stage.setScene(scene);
+        stage.show();
+=======
     void on_save(ActionEvent event) {
         System.out.println("scene_create.Controller.on_save called");
         try {
@@ -33,6 +49,7 @@ public class Controller {
         } catch (Exception e) {
             e.printStackTrace();
         }
+>>>>>>> Stashed changes
     }
 
 }
