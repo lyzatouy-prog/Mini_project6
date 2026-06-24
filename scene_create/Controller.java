@@ -3,6 +3,7 @@ package scene_create;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -18,7 +19,7 @@ public class Controller {
 
     @FXML
     void on_save(ActionEvent event) throws Exception{
- var node = (Node) event.getSource();
+    var node = (Node) event.getSource();
         var stage = (Stage) node.getScene().getWindow();
         var view_create = getClass().getResource("../scene_create/View.fxml");
         
