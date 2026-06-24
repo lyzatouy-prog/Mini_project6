@@ -22,7 +22,7 @@ public class Controller {
 
     @FXML
     void on_create(ActionEvent event) throws Exception {
-
+        var node = (Node) event.getSource();
         var stage = (Stage) label_status.getScene().getWindow();
         var view_create = getClass().getResource("../scene_create/View.fxml");
         
