@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.stage.Stage;
@@ -23,7 +24,20 @@ public class Controller {
     }
 
     @FXML
-    void on_delete(ActionEvent event) {
+    void on_delete(ActionEvent event) throws Exception {
+
+        var stage = (Stage) label_status.getScene().getWindow();
+
+        var view_delete = getClass().getResource("/scene_delete/View.fxml");
+        var controller_delete = new scene_delete.Controller();
+
+        var loader = new javafx.fxml.FXMLLoader();
+        loader.setLocation(view_delete);
+        loader.setController(controller_delete);
+
+        var scene = new Scene(loader.load());
+        stage.setScene(scene);
+        stage.show();
 
     }
 
@@ -55,10 +69,6 @@ public class Controller {
     void initialize() {
 
         var data = new ArrayList<String>();
-        data.add("Orange");
-        data.add("Apple");
-        data.add("Banana");
-
         // add data to list view
         list_view.getItems().addAll(data);
 

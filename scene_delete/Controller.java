@@ -1,4 +1,6 @@
+
 package scene_delete;
+
 
 import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
@@ -12,6 +14,8 @@ public class Controller {
 
     @FXML
     void on_yes(ActionEvent event) {
+
+        
 
     }
 
