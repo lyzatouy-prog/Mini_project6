@@ -40,8 +40,21 @@ public class Controller {
     }
 
     @FXML
-    void on_delete(ActionEvent event) {
+    void on_delete(ActionEvent event) throws Exception {
+        var node = (Node) event.getSource();
+        var stage = (Stage) label_status.getScene().getWindow();
+        var view_create = getClass().getResource("../scene_delete/View.fxml");
+        
+        var controller_create = new scene_delete.Controller();
+        var loader = new FXMLLoader();
+        loader.setController(controller_create);
+        loader.setLocation(view_create);
 
+        var scene = new Scene(loader.load());
+
+        stage.setScene(scene);
+        stage.show();
+        
     }
 
     @FXML
@@ -64,7 +77,7 @@ public class Controller {
     }
 
     @FXML
-    void on_update(ActionEvent event) {
+    void on_update(ActionEvent event) throws Exception {
 
     }
 
