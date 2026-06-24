@@ -44,12 +44,14 @@ public class Controller {
     @FXML
     void on_delete(ActionEvent event) throws Exception {
 
-        var selected_index = list_view.getSelectionModel().getSelectedItem();
+        var selected_index = list_view.getSelectionModel().getSelectedIndex();
         System.out.println("selected index: " + selected_index);
 
         if (selected_index == -1) {
             return;
         }
+
+        Global.selected_index = selected_index;
         // var node = (Node) event.getSource();
         // var stage = (Stage) label_status.getScene().getWindow();
         // var view_create = getClass().getResource("/scene_delete/View.fxml");
