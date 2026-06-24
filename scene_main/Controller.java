@@ -7,6 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.stage.FileChooser;
@@ -76,16 +77,24 @@ public class Controller {
     }
 
     @FXML
-    void on_update(ActionEvent event) throws Exception {
+    void on_update(ActionEvent event) {
 
-        var stage = (Stage) label_status.getScene().getWindow();
+        System.out.println("scene_main.Controller.on_update called");
 
-        var view_update = getClass().getResource("/scene_update/View.fxml");
-        var loader = new FXMLLoader(view_update);
+        try {
+            var stage = (Stage) label_status.getScene().getWindow();
 
-        var scene = new Scene(loader.load());
-        stage.setScene(scene);
-        stage.show();
+            var view_update = getClass().getResource("/scene_update/View.fxml");
+            System.out.println("view_update URL: " + view_update);
+            var loader = new FXMLLoader(view_update);
+
+            var scene = new Scene(loader.load());
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 
